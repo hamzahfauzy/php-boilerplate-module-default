@@ -8,6 +8,9 @@ return [
 
     'roles'      => 'Peran',
     'roles_name' => 'Nama',
+    'role_routes'=> 'Rute Peran',
+    'role_routes_role'=> 'Peran',
+    'role_routes_path'=> 'Rute',
 
     'user_roles' => 'Peran Pengguna',
     'user_roles_user' => 'Pengguna',
