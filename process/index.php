@@ -1,8 +1,11 @@
 <?php
 
-use Core\Page;
+header('location:' . routeTo(env('AUTH_AFTER_LOGIN_SUCCESS')));
+die();
 
-Page::set_title(__("crud.label.home"));
-Page::setActive("crud.label.home");
+// use Core\Page;
 
-return view('default/views/index');
+// Page::set_title(__("crud.label.home"));
+// Page::setActive("crud.label.home");
+
+// return view('default/views/index');
