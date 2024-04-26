@@ -23,4 +23,5 @@ return [
     'created_at' => 'Created At',
 
     'profile' => 'Profile',
+    'record_type' => 'Record Type',
 ];

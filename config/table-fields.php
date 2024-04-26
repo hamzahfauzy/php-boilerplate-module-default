@@ -58,5 +58,9 @@ return [
             'label' => __('default.label.created_at'),
             'type' => 'datetime-local'
         ],
+        'record_type' => [
+            'label' => __('default.label.record_type'),
+            'type' => 'text'
+        ],
     ]
 ];

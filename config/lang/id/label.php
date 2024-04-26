@@ -23,4 +23,5 @@ return [
     'created_at' => 'Tanggal',
     
     'profile' => 'Profil',
+    'record_type' => 'Tipe Record',
 ];
