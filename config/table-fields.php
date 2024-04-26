@@ -41,4 +41,22 @@ return [
             'type'  => 'options-obj:roles,id,name'
         ],
     ],
+    'media' => [
+        'original_name' => [
+            'label' => __('default.label.file_name'),
+            'type' => 'text'
+        ],
+        'name' => [
+            'label' => __('default.label.file'),
+            'type' => 'file'
+        ],
+        'created_by' => [
+            'label' => __('default.label.created_by'),
+            'type' => 'options-obj:users,id,name'
+        ],
+        'created_at' => [
+            'label' => __('default.label.created_at'),
+            'type' => 'datetime-local'
+        ],
+    ]
 ];

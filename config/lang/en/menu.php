@@ -5,5 +5,6 @@ return [
     'dashboard' => 'Dashboard',
     'users and roles' => 'Users and Roles',
     'users' => 'Users',
-    'roles' => 'Roles'
+    'roles' => 'Roles',
+    'media' => 'Media',
 ];

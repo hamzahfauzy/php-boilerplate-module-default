@@ -15,4 +15,12 @@ return [
     'user_roles' => 'Peran Pengguna',
     'user_roles_user' => 'Pengguna',
     'user_roles_role' => 'Peran',
+
+    'media' => 'Media',
+    'file_name' => 'Nama File',
+    'file' => 'File',
+    'created_by' => 'Pembuat',
+    'created_at' => 'Tanggal',
+    
+    'profile' => 'Profil',
 ];

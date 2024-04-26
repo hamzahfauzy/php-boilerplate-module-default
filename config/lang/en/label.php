@@ -15,4 +15,12 @@ return [
     'user_roles' => 'User Roles',
     'user_roles_user' => 'User',
     'user_roles_role' => 'Role',
+
+    'media' => 'Media',
+    'file_name' => 'File Name',
+    'file' => 'File',
+    'created_by' => 'Created By',
+    'created_at' => 'Created At',
+
+    'profile' => 'Profile',
 ];

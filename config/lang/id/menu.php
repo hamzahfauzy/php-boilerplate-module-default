@@ -5,5 +5,6 @@ return [
     'dashboard' => 'Dashboard',
     'users and roles' => 'Pengguna dan Peran',
     'users' => 'Pengguna',
-    'roles' => 'Peran'
+    'roles' => 'Peran',
+    'media' => 'Media',
 ];
