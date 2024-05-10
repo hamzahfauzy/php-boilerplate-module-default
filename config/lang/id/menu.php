@@ -7,4 +7,5 @@ return [
     'users' => 'Pengguna',
     'roles' => 'Peran',
     'media' => 'Media',
+    'settings' => 'Pengaturan',
 ];

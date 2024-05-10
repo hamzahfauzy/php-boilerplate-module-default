@@ -24,4 +24,6 @@ return [
 
     'profile' => 'Profile',
     'record_type' => 'Record Type',
+
+    'settings' => 'Settings',
 ];

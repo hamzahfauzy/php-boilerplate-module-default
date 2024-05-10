@@ -24,4 +24,5 @@ return [
     
     'profile' => 'Profil',
     'record_type' => 'Tipe Record',
+    'settings' => 'Pengaturan',
 ];

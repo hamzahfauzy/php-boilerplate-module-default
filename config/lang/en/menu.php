@@ -7,4 +7,5 @@ return [
     'users' => 'Users',
     'roles' => 'Roles',
     'media' => 'Media',
+    'settings' => 'Settings',
 ];

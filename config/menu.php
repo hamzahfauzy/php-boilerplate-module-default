@@ -19,4 +19,10 @@ return [
         'route' => routeTo('crud/index',['table'=>'roles']),
         'activeState' => 'default.roles'
     ],
+    [
+        'label' => 'default.menu.settings',
+        'icon'  => 'fa-fw fa-xl me-2 fa-solid fa-cog',
+        'route' => routeTo('default/settings/index'),
+        'activeState' => 'default.settings'
+    ],
 ];
