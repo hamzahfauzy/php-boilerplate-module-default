@@ -4,8 +4,11 @@
         <p class="h4 m-0"><?= __('default.label.settings') ?></p>
     </div>
     <div class="card-body">
-        <?php if($error_msg): ?>
-        <div class="alert alert-danger"><?=$error_msg?></div>
+        <?php if ($success_msg) : ?>
+        <div class="alert alert-success"><?= $success_msg ?></div>
+        <?php endif ?>
+        <?php if ($error_msg) : ?>
+        <div class="alert alert-danger"><?= $error_msg ?></div>
         <?php endif ?>
         <form action="" method="post" enctype="multipart/form-data">
             <?= csrf_field() ?>

@@ -6,6 +6,7 @@ use Core\Utility;
 use Modules\Default\Libraries\Sdk\Media;
 
 $title = __('default.label.settings');
+$success_msg = get_flash_msg('success');
 $error_msg  = get_flash_msg('error');
 $old        = get_flash_msg('old');
 
@@ -78,4 +79,4 @@ Page::pushFoot("<script src='".asset('assets/crud/js/crud.js')."'></script>");
 
 Page::pushHook('edit');
 
-return view('default/views/settings/index', compact('fields','error_msg','old','data'));
+return view('default/views/settings/index', compact('fields','error_msg','old','data','success_msg'));
