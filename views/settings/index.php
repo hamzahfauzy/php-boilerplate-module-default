@@ -35,7 +35,7 @@
                     }
                 }
                 $label = _ucwords($label);
-                $fieldname = $type == 'file' ? $field : $tableName."[".$field."]";
+                $fieldname = $field;
                 $attr = array_merge($attr, ["placeholder"=>$label,"value"=>$old[$field]??$data[$field]]);
                 if(isset($attr['multiple']))
                 {
