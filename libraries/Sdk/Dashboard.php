@@ -21,10 +21,10 @@ class Dashboard
                 //code...
                 if(is_callable($component))
                 {
-                    $contents[] = $component;
+                    $contents[] = $component();
                 }
 
-                if(is_string($component))
+                else if(is_string($component))
                 {
                     $contents[] = ($component)();
                 }
