@@ -20,10 +20,11 @@ class Media
         self::init();
 
         $name = $file['name'];
+        $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
         $data = [];
 
         $data['name'] = Storage::upload($file);
-        $data['original_name'] = substr($name, 0, 20);
+        $data['original_name'] = substr($name, 0, 20).'.'.$ext;
 
         if(auth())
         {
