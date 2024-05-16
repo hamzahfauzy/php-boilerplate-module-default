@@ -5,16 +5,35 @@ namespace Modules\Default\Libraries\Sdk;
 class Dashboard 
 {
 
-    private static $contents  = [];
+    private static $components  = [];
 
-    static function add($content)
+    static function add($components)
     {
-        self::$contents[] = $content;
+        self::$components[] = $components;
     }
 
     static function render()
     {
-        return implode('', self::$contents);
+        $contents = [];
+        foreach(self::$components as $component)
+        {
+            try {
+                //code...
+                if(is_callable($component))
+                {
+                    $contents[] = $component;
+                }
+
+                if(is_string($component))
+                {
+                    $contents[] = ($component)();
+                }
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+        }
+
+        return implode('', $contents);
     }
 
 }
