@@ -23,7 +23,7 @@ class Media
         $data = [];
 
         $data['name'] = Storage::upload($file);
-        $data['original_name'] = $name;
+        $data['original_name'] = substr($name, 0, 20);
 
         if(auth())
         {
