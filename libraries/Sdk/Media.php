@@ -15,7 +15,7 @@ class Media
         self::$db = new Database();
     }
     
-    static function singleUpload($file)
+    static function singleUpload($file, $record_type = '')
     {
         self::init();
 
@@ -25,6 +25,7 @@ class Media
 
         $data['name'] = Storage::upload($file);
         $data['original_name'] = substr($name, 0, 20).'.'.$ext;
+        $data['record_type'] = $record_type;
 
         if(auth())
         {
