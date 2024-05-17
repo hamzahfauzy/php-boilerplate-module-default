@@ -14,6 +14,7 @@ return [
 
     'user_roles' => 'User Roles',
     'user_roles_user' => 'User',
+    'user' => 'User',
     'user_roles_role' => 'Role',
 
     'media' => 'Media',
@@ -26,4 +27,10 @@ return [
     'record_type' => 'Record Type',
 
     'settings' => 'Settings',
+    'calendar' => 'Calendar',
+    'title' => 'Title',
+    'description' => 'Description',
+    'start_at' => 'Start At',
+    'end_at' => 'End At',
+    'visibility' => 'Visibility',
 ];

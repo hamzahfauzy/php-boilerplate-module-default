@@ -8,4 +8,5 @@ return [
     'roles' => 'Peran',
     'media' => 'Media',
     'settings' => 'Pengaturan',
+    'calendar' => 'Kalender',
 ];

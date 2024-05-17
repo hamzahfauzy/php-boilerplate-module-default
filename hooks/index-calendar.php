@@ -4,8 +4,6 @@ if(get_role(auth()->id)->role_id == env('USER_ROLE_ID'))
     $filter['created_by'] = auth()->id;
 }
 
-$having = "";
-
 if($filter)
 {
     $filter_query = [];
@@ -16,7 +14,7 @@ if($filter)
 
     $filter_query = implode(' AND ', $filter_query);
 
-    $having = (empty($having) ? 'HAVING ' : ' AND ') . $filter_query;
+    $where = (empty($where) ? 'WHERE ' : ' AND ') . $filter_query;
 }
 
 $db->query = "SELECT * FROM $this->table $where ORDER BY ".$col_order." ".$order[0]['dir']." LIMIT $start,$length";

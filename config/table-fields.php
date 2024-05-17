@@ -62,5 +62,31 @@ return [
             'label' => __('default.label.record_type'),
             'type' => 'text'
         ],
+    ],
+    'calendar' => [
+        'title' => [
+            'label' => __('default.label.title'),
+            'type'  => 'text'
+        ],
+        'description' => [
+            'label' => __('default.label.description'),
+            'type'  => 'textarea'
+        ],
+        'start_at' => [
+            'label' => __('default.label.start_at'),
+            'type'  => 'datetime-local'
+        ],
+        'end_at' => [
+            'label' => __('default.label.end_at'),
+            'type'  => 'datetime-local'
+        ],
+        'record_type' => [
+            'label' => __('default.label.record_type'),
+            'type'  => 'text'
+        ],
+        'visibility' => [
+            'label' => __('default.label.visibility'),
+            'type'  => 'options:PRIVATE|PUBLIC'
+        ],
     ]
 ];

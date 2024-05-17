@@ -13,6 +13,7 @@ return [
     'role_routes_path'=> 'Rute',
 
     'user_roles' => 'Peran Pengguna',
+    'user' => 'Pengguna',
     'user_roles_user' => 'Pengguna',
     'user_roles_role' => 'Peran',
 
@@ -23,6 +24,12 @@ return [
     'created_at' => 'Tanggal',
     
     'profile' => 'Profil',
+    'calendar' => 'Kalender',
     'record_type' => 'Tipe Record',
     'settings' => 'Pengaturan',
+    'title' => 'Judul',
+    'description' => 'Deskripsi',
+    'start_at' => 'Mulai',
+    'end_at' => 'Berakhir',
+    'visibility' => 'Visibilitas',
 ];

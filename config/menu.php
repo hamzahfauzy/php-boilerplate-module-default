@@ -8,6 +8,12 @@ return [
         'activeState' => 'default.media'
     ],
     [
+        'label' => 'default.menu.calendar',
+        'icon'  => 'fa-fw fa-xl me-2 fa-solid fa-calendar',
+        'route' => routeTo('crud/index',['table' => 'calendar']),
+        'activeState' => 'default.calendar'
+    ],
+    [
         'label' => 'default.menu.users',
         'icon'  => 'fa-fw fa-xl me-2 fa-solid fa-users',
         'route' => routeTo('crud/index',['table'=>'users']),
