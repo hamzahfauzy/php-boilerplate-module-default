@@ -1,7 +1,9 @@
 <?php
 
+use Core\Database;
 use Core\Page;
 use Core\Request;
+use Core\Setting;
 use Core\Utility;
 use Modules\Default\Libraries\Sdk\Media;
 
@@ -9,6 +11,7 @@ $title = __('default.label.settings');
 $success_msg = get_flash_msg('success');
 $error_msg  = get_flash_msg('error');
 $old        = get_flash_msg('old');
+$db = new Database();
 
 $parentPath = Utility::parentPath();
 $settingFile = $parentPath . 'settings.json';
@@ -20,7 +23,14 @@ if(file_exists($settingFile))
 
     foreach($fields as $key => $field)
     {
-        $data[$key] = env($field['key'], '');
+        if(isset($field['target']) && $field['target'] == 'db')
+        {
+            $data[$key] = Setting::get($key);
+        }
+        else
+        {
+            $data[$key] = env($field['key'], '');
+        }
     }
 
 
@@ -36,7 +46,14 @@ if(file_exists($settingFile))
                 $field_value = asset($file->name);
             }
             
-            $writer->set($field['key'], $field_value);
+            if(isset($field['target']) && $field['target'] == 'db')
+            {
+                Setting::save($field['key'], $field_value);
+            }
+            else
+            {
+                $writer->set($field['key'], $field_value);
+            }
         }
 
         $writer->write();
