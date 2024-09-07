@@ -59,7 +59,7 @@ if(file_exists($settingFile))
         $writer->write();
         set_flash_msg(['success'=>"$title berhasil diupdate"]);
 
-        header('location:'.crudRoute('default/settings/index',$tableName));
+        header('location:'.routeTo('default/settings/index'));
         die();
     }
 }
