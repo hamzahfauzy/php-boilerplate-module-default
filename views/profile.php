@@ -8,7 +8,7 @@ table td img {
     <div class="card-header d-flex flex-grow-1 align-items-center">
         <p class="h4 m-0"><?php get_title() ?></p>
         <div class="right-button ms-auto">
-            
+            <a href="<?=routeTo('default/edit-profile')?>" class="btn btn-info">Edit Profile</a>
         </div>
     </div>
     <div class="card-body">
@@ -20,7 +20,7 @@ table td img {
                 <td>
                     <table class="table table-bordered">
                         <tr>
-                            <td width="150px">Nama</td>
+                            <td width="250px">Nama</td>
                             <td width="20px">:</td>
                             <td><?=$user->name?></td>
                         </tr>
@@ -29,6 +29,49 @@ table td img {
                             <td>:</td>
                             <td><?=$user->username?></td>
                         </tr>
+                        <?php if(strpos(env('APP_MODULES'), 'assessment') > -1): ?>
+                        <tr>
+                            <td>NIDN</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->NIDN?></td>
+                        </tr>
+                        <tr>
+                            <td>Pangkat, Golongan ruang</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->pangkat?>, <?=$user->assessment_profile?->golongan?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>Jabatan</b></td>
+                        </tr>
+                        <tr>
+                            <td>- Struktural</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->jab_struktural?></td>
+                        </tr>
+                        <tr>
+                            <td>- Akademik</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->jab_akademik?></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><b>Unit Kerja</b></td>
+                        </tr>
+                        <tr>
+                            <td>- Perguruan Tinggi</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->perguruan_tinggi?></td>
+                        </tr>
+                        <tr>
+                            <td>- Fakultas</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->fakultas?></td>
+                        </tr>
+                        <tr>
+                            <td>- Program Studi</td>
+                            <td>:</td>
+                            <td><?=$user->assessment_profile?->program_studi?></td>
+                        </tr>
+                        <?php endif ?>
                     </table>
                 </td>
             </tr>

@@ -11,6 +11,13 @@ $user = isset($_GET['user_id']) && !empty($_GET['user_id']) ? $db->single('users
 $success_msg = get_flash_msg('success');
 $error_msg   = get_flash_msg('error');
 
+if(in_array('assessment', explode(',',env('APP_MODULES'))))
+{
+    $user->assessment_profile = $db->single('assessment_profiles',[
+        'user_id' => $user->id
+    ]);
+}
+
 $files = null;
 $mediaTypes = ['KTP','Ijazah','Transkrip','SK Pegawai','SK Dosen Tetap','Sertifikat Pelatihan','Sertifikat Lainnya','SK Jabatan Fungsional'];
 if(in_array('organization', explode(',',env('APP_MODULES'))))
