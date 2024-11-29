@@ -18,6 +18,10 @@ if(in_array('assessment', explode(',',env('APP_MODULES'))))
     ]);
 }
 
+$user->profile = $db->single('profile', [
+    'user_id' => $user->id
+]);
+
 $files = null;
 $mediaTypes = ['KTP','Ijazah','Transkrip','SK Pegawai','SK Dosen Tetap','Sertifikat Pelatihan','Sertifikat Lainnya','SK Jabatan Fungsional'];
 if(in_array('organization', explode(',',env('APP_MODULES'))))

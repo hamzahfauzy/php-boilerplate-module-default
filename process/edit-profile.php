@@ -17,9 +17,23 @@ if(in_array('assessment', explode(',',env('APP_MODULES'))))
     ]);
 }
 
+$user->profile = $db->single('profile', [
+    'user_id' => $user->id
+]);
+
 if(Request::isMethod('POST'))
 {
     $db->update('users', $_POST['users'], ['id' => $user->id]);
+    if($user->profile)
+    {
+        $db->update('profile', $_POST['profile'], ['user_id' => $user->id]);
+    }
+    else
+    {
+        $_POST['profile']['user_id'] = $user->id;
+        $_POST['profile']['name'] = $user->name;
+        $db->insert('profile', $_POST['profile']);
+    }
     if(in_array('assessment', explode(',',env('APP_MODULES'))))
     {
         if($user->assessment_profile)

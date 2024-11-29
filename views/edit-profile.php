@@ -15,8 +15,28 @@ table td img {
         <form method="post">
             <?= csrf_field() ?>
             <div class="form-group mb-2">
+                <label for="" class="mb-1">Kode</label>
+                <input type="text" class="form-control" name="profile[code]" value="<?=$user->profile?->code?>">
+            </div>
+            <div class="form-group mb-2">
                 <label for="" class="mb-1">Nama</label>
                 <input type="text" class="form-control" name="users[name]" value="<?=$user->name?>">
+            </div>
+            <div class="form-group mb-2">
+                <label for="" class="mb-1">Alamat</label>
+                <textarea class="form-control" name="profile[address]"><?=$user->profile?->address?></textarea>
+            </div>
+            <div class="form-group mb-2">
+                <label for="" class="mb-1">Jenis Kelamin</label>
+                <select name="profile[gender]" id="" class="form-control">
+                    <option value="">Pilih</option>
+                    <option value="MALE" <?=$user->profile?->gender == 'MALE' ? 'selected=""' : ''?>>Laki-laki</option>
+                    <option value="FEMALE" <?=$user->profile?->gender == 'FEMALE' ? 'selected=""' : ''?>>Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group mb-2">
+                <label for="" class="mb-1">No. HP</label>
+                <input type="tel" class="form-control" name="profile[phone]" value="<?=$user->profile?->phone?>">
             </div>
             <?php if(strpos(env('APP_MODULES'), 'assessment') > -1): ?>
             <div class="form-group mb-2">

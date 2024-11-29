@@ -20,9 +20,29 @@ table td img {
                 <td>
                     <table class="table table-bordered">
                         <tr>
+                            <td width="250px">Kode</td>
+                            <td width="20px">:</td>
+                            <td><?=$user->profile?->code?></td>
+                        </tr>
+                        <tr>
                             <td width="250px">Nama</td>
                             <td width="20px">:</td>
                             <td><?=$user->name?></td>
+                        </tr>
+                        <tr>
+                            <td width="250px">Alamat</td>
+                            <td width="20px">:</td>
+                            <td><?=$user->profile?->address?></td>
+                        </tr>
+                        <tr>
+                            <td width="250px">Jenis Kelamin</td>
+                            <td width="20px">:</td>
+                            <td><?=$user->profile?->gender?></td>
+                        </tr>
+                        <tr>
+                            <td width="250px">No. HP</td>
+                            <td width="20px">:</td>
+                            <td><?=$user->profile?->phone?></td>
                         </tr>
                         <tr>
                             <td>Username</td>
