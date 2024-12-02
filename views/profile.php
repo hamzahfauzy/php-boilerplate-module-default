@@ -8,10 +8,17 @@ table td img {
     <div class="card-header d-flex flex-grow-1 align-items-center">
         <p class="h4 m-0"><?php get_title() ?></p>
         <div class="right-button ms-auto">
+            <a href="javascript:void(0)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editPasswordModal">Edit Password</a>
             <a href="<?=routeTo('default/edit-profile')?>" class="btn btn-info">Edit Profile</a>
         </div>
     </div>
     <div class="card-body">
+        <?php if ($success_msg) : ?>
+        <div class="alert alert-success"><?= $success_msg ?></div>
+        <?php endif ?>
+        <?php if ($error_msg) : ?>
+        <div class="alert alert-danger"><?= $error_msg ?></div>
+        <?php endif ?>
         <table class="table">
             <tr>
                 <td rowspan="2" width="250px">
@@ -97,6 +104,29 @@ table td img {
             </tr>
         </table>
     </div>
+</div>
+
+<div class="modal fade" id="editPasswordModal" tabindex="-1" role="dialog" aria-labelledby="editPasswordForm" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editPasswordForm">Edit Password</h5>
+      </div>
+      <div class="modal-body">
+        <form action="<?=routeTo('default/update-password')?>" method="post" enctype="multipart/form-data">
+            <?= csrf_field() ?>
+            <div class="form-group mb-3">
+                <label for="" class="mb-2">Password Baru</label>
+                <input type="password" name="password" id="" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php if(is_array($files)): ?>
