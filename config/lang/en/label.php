@@ -11,6 +11,7 @@ return [
     'role_routes'=> 'Role Route',
     'role_routes_role'=> 'Role',
     'role_routes_path'=> 'Route',
+    'role_order_number'=> 'Order Number',
 
     'user_roles' => 'User Roles',
     'user_roles_user' => 'User',

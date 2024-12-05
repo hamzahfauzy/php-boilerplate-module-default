@@ -30,6 +30,13 @@ return [
             'label' => __('default.label.role_routes_path'),
             'type'  => 'text'
         ],
+        'order_number' => [
+            'label' => __('default.label.role_order_number'),
+            'type'  => 'number',
+            'attr' => [
+                'value' => 10
+            ]
+        ],
     ],
     'user_roles'  => [
         'user_id' => [
