@@ -4,11 +4,13 @@ return [
     'users'  => [
         'name' => [
             'label' => __('default.label.users_name'),
-            'type'  => 'text'
+            'type'  => 'text',
+            'search' => 'users.name'
         ],
         'username' => [
             'label' => __('default.label.users_username'),
-            'type'  => 'text'
+            'type'  => 'text',
+            'search' => 'users.username'
         ],
         'password' => [
             'label' => __('default.label.users_password'),
