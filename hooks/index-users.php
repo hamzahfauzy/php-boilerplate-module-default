@@ -15,7 +15,7 @@ if($filter)
     $having = (empty($having) ? 'HAVING ' : ' AND ') . $filter_query;
 }
 
-$where = $where ." ". $having;
+$where = $where ." GROUP BY users.id, users.name, users.username ". $having;
 
 $query = "SELECT 
             $this->table.id,
@@ -25,8 +25,7 @@ $query = "SELECT
           FROM $this->table 
           LEFT JOIN user_roles ON user_roles.user_id = users.id
           LEFT JOIN roles ON roles.id = user_roles.role_id
-          $where
-          GROUP BY users.id, users.name, users.username";
+          $where";
 
 $this->db->query = "$query ORDER BY ".$col_order." ".$order[0]['dir']." LIMIT $start,$length";
 $data  = $this->db->exec('all');
